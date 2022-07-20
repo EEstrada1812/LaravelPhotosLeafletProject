@@ -41,4 +41,4 @@ Note to run sail commands run ```alias sail='[ -f sail ] && bash sail || bash ve
 
 ### Troubleshooting:
 * If port 80 error - Ensure mysql is not already running
-* To remove all docker images and volumesr run ./vendor/bin/sail down --rmi all -v
+* To remove all docker images and volumesr run ```./vendor/bin/sail down --rmi all -v```
