@@ -32,8 +32,8 @@ laravelsail/php81-composer:latest \
 composer install --ignore-platform-reqs
 ```
 * Run ```sail up```
-* Run (in new terminal) run ```./vendor/bin/sail shell``` then  ```npm install && npm run dev```
-* Run (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan storage:link```
+* Run (in new terminal) ```./vendor/bin/sail shell``` then  ```npm install && npm run dev```
+* Run (in new terminal) ```./vendor/bin/sail shell``` then  ```php artisan storage:link```
 * Open browser, navigate to localhost
 * Click "generate app key", refresh page
 * Click "run migrations", refresh page
