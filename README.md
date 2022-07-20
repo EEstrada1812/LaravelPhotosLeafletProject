@@ -14,7 +14,10 @@ Currently working on adding tests using the in included phpunit.
 Docker
 
 ## Installation:
-Note to run sail commands run ```alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'```
+Note to run sail commands run 
+```
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+```
 
 * Download repo
 * Copy/rename ```.env.example``` file to ```.env```
