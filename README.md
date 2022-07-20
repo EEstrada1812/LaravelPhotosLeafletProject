@@ -28,15 +28,17 @@ Note to run sail commands run ```alias sail='[ -f sail ] && bash sail || bash ve
     laravelsail/php81-composer:latest \
     composer install --ignore-platform-reqs
     ```
-* run ```sail up```
-* run (in new terminal) run ```./vendor/bin/sail shell``` then  ```npm install && npm run dev```
-* run (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan storage:link```
-* open browser, navigate to localhost
-* click "generate app key", refresh page
-* click "run migrations", refresh page
-* register as new user
-* navigate to ```localhost/map```
+* Run ```sail up```
+* Run (in new terminal) run ```./vendor/bin/sail shell``` then  ```npm install && npm run dev```
+* Run (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan storage:link```
+* Open browser, navigate to localhost
+* Click "generate app key", refresh page
+* Click "run migrations", refresh page
+* Register as new user
+* Vavigate to ```localhost/map```
+
+* To run tests (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan test```
 
 Troubleshooting:
-If port 80 error - Ensure mysql is not already running
-To remove all docker images and volumesr run ./vendor/bin/sail down --rmi all -v
+* If port 80 error - Ensure mysql is not already running
+* To remove all docker images and volumesr run ./vendor/bin/sail down --rmi all -v
