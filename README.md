@@ -33,7 +33,7 @@ Note to run sail commands run ```alias sail='[ -f sail ] && bash sail || bash ve
 * run (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan storage:link```
 * open browser, navigate to localhost
 * click "generate app key", refresh page
-* click "run migrations", refresh
+* click "run migrations", refresh page
 * register as new user
 * navigate to ```localhost/map```
 
