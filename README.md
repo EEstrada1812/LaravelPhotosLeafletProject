@@ -1,4 +1,4 @@
-##Personal Photos Leaflet Map
+## Personal Photos Leaflet Map
 
 Laravel 9 App using Laravel Jetstream and Sail
 
@@ -10,10 +10,10 @@ Added photos can be edited/updated.
 
 Currently working on adding tests using the in included phpunit.
 
-##Requirements:
+## Requirements:
 Docker
 
-##Installation:
+## Installation:
 Note to run sail commands run ```alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'```
 
 * Download repo
@@ -39,6 +39,6 @@ Note to run sail commands run ```alias sail='[ -f sail ] && bash sail || bash ve
 
 * To run tests (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan test```
 
-###Troubleshooting:
+### Troubleshooting:
 * If port 80 error - Ensure mysql is not already running
 * To remove all docker images and volumesr run ./vendor/bin/sail down --rmi all -v
