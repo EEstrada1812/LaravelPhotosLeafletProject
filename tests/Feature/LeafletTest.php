@@ -48,5 +48,45 @@ class LeafletTest extends TestCase
 
         $this->assertEquals($image[0]->title, Image::first()->title);
     }
+
+    public function test_tags_factory_adds_to_tags_table()
+    {
+        $tag = Tag::factory()->count(10)->create();
+        
+        $this->assertEquals(10, Tag::count());
+
+        $this->assertEquals($tag[0]->name, Tag::first()->name);
+    }
+
+    public function test_add_tag_to_image()
+    {
+        $image = Image::factory()->count(1)->create();
+        $tag = Tag::factory()->count(1)->create();
+
+        $firstImage = Image::first();
+        $firstTag = Tag::first();
+
+        $firstImage->tags()->attach($firstTag);
+   
+        $this->assertEquals(1, $firstImage->tags->count());
+    }
+
+    public function test_add_then_delete_tag_from_image()
+    {
+        $image = Image::factory()->create();
+        $tag = Tag::factory()->create();
+
+        $image->tags()->attach($tag);
+   
+        $this->assertEquals($tag->name, $image->tags[0]->name);
+
+        $image = $image->fresh();
+
+        $image->tags()->detach($tag);
+
+
+        $this->assertEquals(0, $image->tags->count());
+    }
+   
     
 }
