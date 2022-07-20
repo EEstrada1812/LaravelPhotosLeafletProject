@@ -40,7 +40,8 @@ composer install --ignore-platform-reqs
 * Register as new user and log in
 * Navigate to ```localhost/map```
 
-* To run tests (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan test```
+## Run Tests
+* To run tests (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan test --filter LeafletTest```
 
 ### Troubleshooting:
 * If port 80 error - Ensure mysql is not already running
