@@ -21,6 +21,8 @@
             width: 50vh !important;
             max-height: 50vh !important;
         }
+
+        [x-cloak] { display: none !important; }
     </style>
     <body x-data={}>
 
@@ -66,7 +68,7 @@
                 
                 let taggedPeople = tags.join(', ');
 
-                allImages.addLayer(L.marker([element.latitude, element.longitude]).bindPopup(`<div class="flex items-center justify-between mt-8"><h1 class="text-xl font-semibold mr-2">${element.title} </h1><button class="bg-sky-500 text-white active:bg-sky-600 font-bold uppercase text-xs px-2 py-1 m-0 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150" onclick="editImage(${element.id})" >edit</button></div><p>${element.description}</p><a href="/storage/${element.imagePath}"><img class="singleImage" src="{{ asset('/storage/${element.imagePath}')}}" /></a><br>tags: ${taggedPeople}`));
+                allImages.addLayer(L.marker([element.latitude, element.longitude]).bindPopup(`<div class="flex items-center justify-between mt-8"><h1 class="text-xl font-semibold mr-2">${element.title} </h1><button class="bg-sky-500 text-white active:bg-sky-600 font-bold uppercase text-xs px-2 py-1 m-0 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150" onclick="editImage(${element.id})" >edit</button></div><p>${element.description}</p><a href="/storage/${element.imagePath}"><img style="max-height: 35vh; margin: 0 auto" class="singleImage" src="{{ asset('/storage/${element.imagePath}')}}" /></a><br>tags: ${taggedPeople}`));
             });
            
             map.addLayer(allImages);
