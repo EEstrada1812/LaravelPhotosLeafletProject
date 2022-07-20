@@ -14,7 +14,7 @@ Currently working on adding tests using the in included phpunit.
 Docker
 
 ## Installation:
-Note to run sail commands run: 
+Note - to run sail commands run: 
 ```
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 ```
