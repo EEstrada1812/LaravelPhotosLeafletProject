@@ -38,7 +38,7 @@ composer install --ignore-platform-reqs
 * Click "generate app key", refresh page
 * Click "run migrations", refresh page
 * Register as new user
-* Vavigate to ```localhost/map```
+* Navigate to ```localhost/map```
 
 * To run tests (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan test```
 
