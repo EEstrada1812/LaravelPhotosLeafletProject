@@ -17,7 +17,7 @@ Installation:
 Note to run sail commands run ```alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'```
 
 * Download repo
-* Copy/rename ```.env.example``` file to .env
+* Copy/rename ```.env.example``` file to ```.env```
 * In terminal navigate to the repo
 * Install dependencies, run
     ```
