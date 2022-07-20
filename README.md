@@ -16,21 +16,21 @@ Docker
 ## Installation:
 Note to run sail commands run: 
 ```
-    alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 ```
 
 * Download repo
 * Copy/rename ```.env.example``` file to ```.env```
 * In terminal navigate to the repo
 * Install dependencies, run
-    ```
-    docker run --rm \
-    -u "$(id -u):$(id -g)" \
-    -v $(pwd):/var/www/html \
-    -w /var/www/html \
-    laravelsail/php81-composer:latest \
-    composer install --ignore-platform-reqs
-    ```
+```
+docker run --rm \
+-u "$(id -u):$(id -g)" \
+-v $(pwd):/var/www/html \
+-w /var/www/html \
+laravelsail/php81-composer:latest \
+composer install --ignore-platform-reqs
+```
 * Run ```sail up```
 * Run (in new terminal) run ```./vendor/bin/sail shell``` then  ```npm install && npm run dev```
 * Run (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan storage:link```
