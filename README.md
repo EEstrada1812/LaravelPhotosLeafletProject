@@ -1,6 +1,6 @@
 Personal Photos Leaflet Map
 
-Laravel 9 App using Laravel Sail
+Laravel 9 App using Laravel Jetstream and Sail
 
 This CRUD Project also utilizes Livewire and AlpineJs
 
