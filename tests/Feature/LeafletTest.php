@@ -49,6 +49,32 @@ class LeafletTest extends TestCase
         $this->assertEquals($image[0]->title, Image::first()->title);
     }
 
+    public function test_delete_image_from_database($imageId = 2)
+    {
+        $image = Image::factory()->count(10)->create();
+
+        $image->find($imageId)->delete();
+
+        $this->assertEquals(9, Image::count());
+    }
+   
+    public function test_update_image_from_database($imageId = 2)
+    {
+        $image = Image::factory()->count(10)->create();
+        $image->find($imageId)->update([
+            'title' => 'new title',
+            'description' => 'new description',
+            'latitude' => 21.123,
+            'longitude' => -21.123,
+            'imagePath' => '/new_image_url',
+        ]);
+        $this->assertEquals('new title', Image::find($imageId)->title);
+        $this->assertEquals('new description', Image::find($imageId)->description);
+        $this->assertEquals(21.123, Image::find($imageId)->latitude);
+        $this->assertEquals(-21.123, Image::find($imageId)->longitude);
+        $this->assertEquals('/new_image_url', Image::find($imageId)->imagePath);
+    }
+
     public function test_tags_factory_adds_to_tags_table()
     {
         $tag = Tag::factory()->count(10)->create();
@@ -86,7 +112,6 @@ class LeafletTest extends TestCase
 
 
         $this->assertEquals(0, $image->tags->count());
-    }
-   
+    }   
     
 }
