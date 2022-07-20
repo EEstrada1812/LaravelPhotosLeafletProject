@@ -4,7 +4,7 @@ Laravel 9 App using Laravel Jetstream and Sail
 
 This CRUD Project also utilizes Livewire and AlpineJs
 
-route /map contains a leaflet map in which a user can add a photo with corresponding latitude and longitude coordinates which will then add a pin to the map.
+route ```/map``` contains a leaflet map in which a user can add a photo with corresponding latitude and longitude coordinates which will then add a pin to the map.
 
 Added photos can be edited/updated.
 
@@ -35,7 +35,7 @@ Note to run sail commands run ```alias sail='[ -f sail ] && bash sail || bash ve
 * click "generate app key", refresh page
 * click "run migrations", refresh
 * register as new user
-* navigate to localhost/map
+* navigate to ```localhost/map```
 
 Troubleshooting:
 If port 80 error - Ensure mysql is not already running
