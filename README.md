@@ -8,7 +8,7 @@ route ```/map``` contains a leaflet map in which a user can add a photo with cor
 
 Added photos can be edited/updated.
 
-Currently working on adding test using the in included phpunit.
+Currently working on adding tests using the in included phpunit.
 
 Requirements:
 Docker
