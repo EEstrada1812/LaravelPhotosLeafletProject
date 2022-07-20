@@ -22,7 +22,7 @@ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 * Download repo
 * Copy/rename ```.env.example``` file to ```.env```
 * In terminal navigate to the repo
-* Install dependencies, run
+* Install dependencies, run:
 ```
 docker run --rm \
 -u "$(id -u):$(id -g)" \
