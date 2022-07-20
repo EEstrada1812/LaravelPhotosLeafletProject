@@ -29,8 +29,8 @@ Note to run sail commands run ``alias sail='[ -f sail ] && bash sail || bash ven
     composer install --ignore-platform-reqs
     ```
 * run ```sail up```
-* run (in new terminal) run ```./vendor/bin/sail shell``` then  ```npm install && npm run dev``
-* run (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan storage:link``
+* run (in new terminal) run ```./vendor/bin/sail shell``` then  ```npm install && npm run dev```
+* run (in new terminal) run ```./vendor/bin/sail shell``` then  ```php artisan storage:link```
 * open browser, navigate to localhost
 * click "generate app key", refresh page
 * click "run migrations", refresh
